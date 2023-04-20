@@ -1,12 +1,16 @@
 apiVersion: lifecycle.keptn.sh/v1alpha3
 kind: KeptnApp
 metadata:
-  name: simpleapp
+  name: ecommerce-app
   namespace: simplenode-dev
 spec:
   version: "1.0.0"
   workloads:
-    - name: simplenode
+    - name: frontend
       version: 1.0.2
+    - name: backend
+      version: 2.0.2
   preDeploymentEvaluations:
+    - app-pre-deploy-eval
+  postDeploymentEvaluations:
     - app-pre-deploy-eval
