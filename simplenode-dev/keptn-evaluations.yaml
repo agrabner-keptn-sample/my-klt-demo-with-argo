@@ -21,7 +21,8 @@ spec:
         name: available-cpus
         namespace: simplenode-dev
       evaluationTarget: ">4"
-    - keptnMetricRef:
-        name: availability-slo
-        namespace: simplenode-dev
-      evaluationTarget: ">0.90"
+# Evaluations can range across multiple objectives from different sources, e.g: SLOs from Dynatrace
+#    - keptnMetricRef:
+#        name: availability-slo
+#        namespace: simplenode-dev
+#      evaluationTarget: ">0.90"
