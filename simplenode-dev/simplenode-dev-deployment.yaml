@@ -17,7 +17,7 @@ spec:
       labels:
         app: simplenode
         app.kubernetes.io/name: simplenodeservice
-        app.kubernetes.io/version: 1.0.2
+        app.kubernetes.io/version: 2.0.2
         # app.kubernetes.io/part-of: simpleapp --> optionally allows you to specify the KeptnApp reference
       annotations:
         # keptn.sh/app: simpleapp  --> optional: defaults to app.kubernetes.io/part-of
@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: simplenode
-        image: "grabnerandi/simplenodeservice:1.0.2"
+        image: "grabnerandi/simplenodeservice:2.0.2"
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
