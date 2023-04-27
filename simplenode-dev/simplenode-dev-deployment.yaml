@@ -18,7 +18,7 @@ spec:
         app: simplenode
         app.kubernetes.io/name: simplenodeservice
         app.kubernetes.io/version: 1.0.2
-        app.kubernetes.io/part-of: simpleapp
+        # app.kubernetes.io/part-of: simpleapp --> optionally allows you to specify the KeptnApp reference
       annotations:
         # keptn.sh/app: simpleapp  --> optional: defaults to app.kubernetes.io/part-of
         # keptn.sh/workload: simplenode --> optional: defaults to app.kubernetes.io/part-of
