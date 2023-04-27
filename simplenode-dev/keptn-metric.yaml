@@ -8,8 +8,7 @@ spec:
     name: prometheus
   query: "sum(kube_node_status_capacity{resource='cpu'})"
   fetchIntervalSeconds: 10
-
-
+---
 apiVersion: metrics.keptn.sh/v1alpha2
 kind: KeptnMetric
 metadata:
