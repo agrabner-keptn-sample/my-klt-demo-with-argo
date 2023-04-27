@@ -21,3 +21,7 @@ spec:
         name: available-cpus
         namespace: simplenode-dev
       evaluationTarget: ">4"
+    - keptnMetricRef:
+        name: availability-slo
+        namespace: simplenode-dev
+      evaluationTarget: ">0.90"
