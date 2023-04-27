@@ -13,10 +13,10 @@ spec:
 apiVersion: metrics.keptn.sh/v1alpha2
 kind: KeptnMetric
 metadata:
- name: availability-slo
- namespace: simplenode-dev
+  name: availability-slo
+  namespace: simplenode-dev
 spec:
- provider: 
-   name: dynatrace
- query: "func:slo.availability_simplenodeservice"
+  provider: 
+    name: dynatrace
+  query: "func:slo.availability_simplenodeservice"
   fetchIntervalSeconds: 10
