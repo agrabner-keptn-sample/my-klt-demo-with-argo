@@ -1,7 +1,7 @@
 apiVersion: metrics.keptn.sh/v1alpha2
 kind: KeptnMetricsProvider
 metadata:
-  name: prometheus
+  name: dynatrace
   namespace: simplenode-dev
 spec:
   targetServer: "https://hci34192.live.dynatrace.com"
