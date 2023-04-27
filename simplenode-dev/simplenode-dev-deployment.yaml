@@ -17,10 +17,13 @@ spec:
       labels:
         app: simplenode
         app.kubernetes.io/name: simplenodeservice
+        app.kubernetes.io/version: 1.0.2
+        app.kubernetes.io/part-of: simpleapp
       annotations:
-        # keptn.sh/app: simpleapp
-        keptn.sh/workload: simplenode
-        keptn.sh/version: 4.0.2
+        # keptn.sh/app: simpleapp  --> optional: defaults to app.kubernetes.io/part-of
+        # keptn.sh/workload: simplenode --> optional: defaults to app.kubernetes.io/part-of
+        # keptn.sh/version: 1.0.2 --> optional: defaults to app.kubernetes.io/version
+        # Specify Pre & Post Deployment Actions
         keptn.sh/pre-deployment-evaluations: evaluate-dependencies
         keptn.sh/pre-deployment-tasks: notify
         keptn.sh/post-deployment-evaluations: evaluate-deployment
@@ -28,7 +31,7 @@ spec:
     spec:
       containers:
       - name: simplenode
-        image: "grabnerandi/simplenodeservice:4.0.2"
+        image: "grabnerandi/simplenodeservice:1.0.2"
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
