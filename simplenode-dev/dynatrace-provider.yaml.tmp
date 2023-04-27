@@ -3,7 +3,7 @@ kind: KeptnMetricsProvider
 metadata:
   name: dynatrace
 spec:
-  targetServer: "DT_TENANT"
+  targetServer: "https://MYTENANT.live.dynatrace.com"
   secretKeyRef:
     name: dynatrace
     key: DT_TOKEN
