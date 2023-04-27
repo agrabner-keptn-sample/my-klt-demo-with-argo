@@ -8,14 +8,15 @@ spec:
     name: prometheus
   query: "sum(kube_node_status_capacity{resource='cpu'})"
   fetchIntervalSeconds: 10
----
-apiVersion: metrics.keptn.sh/v1alpha2
-kind: KeptnMetric
-metadata:
-  name: availability-slo
-  namespace: simplenode-dev
-spec:
-  provider: 
-    name: dynatrace
-  query: "func:slo.availability_simplenodeservice"
-  fetchIntervalSeconds: 10
+# ---
+# You can define multiple metrics from different metric providers, e.g: Dynatrace
+# apiVersion: metrics.keptn.sh/v1alpha2
+# kind: KeptnMetric
+# metadata:
+#  name: availability-slo
+#  namespace: simplenode-dev
+# spec:
+#  provider: 
+#    name: dynatrace
+#  query: "func:slo.availability_simplenodeservice"
+#   fetchIntervalSeconds: 10
