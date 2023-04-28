@@ -16,13 +16,13 @@ metadata:
   name: evaluate-deployment
   namespace: simplenode-dev
 spec:
+# Evaluations can range across multiple objectives from different sources, e.g: Infra from Prometheus, SLOs from Dynatrace
   objectives:
     - keptnMetricRef:
         name: available-cpus
         namespace: simplenode-dev
       evaluationTarget: ">4"
-# Evaluations can range across multiple objectives from different sources, e.g: SLOs from Dynatrace
-#    - keptnMetricRef:
-#        name: availability-slo
-#        namespace: simplenode-dev
-#      evaluationTarget: ">0.90"
+    - keptnMetricRef:
+        name: availability-slo
+        namespace: simplenode-dev
+      evaluationTarget: ">0.90"
