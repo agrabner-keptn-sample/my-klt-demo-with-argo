@@ -25,4 +25,4 @@ spec:
     - keptnMetricRef:
         name: availability-slo
         namespace: simplenode-dev
-      evaluationTarget: ">0.90"
+      evaluationTarget: ">90"
