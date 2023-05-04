@@ -1,0 +1,24 @@
+apiVersion: autoscaling/v
+kind: HorizontalPodAutoscaler
+metadata:
+  name: simplenode-scaler
+  namespace: simplenode-dev
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: simplenode
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: Object
+      object:
+        metric:
+          name: availability-slo
+        describedObject:
+          apiVersion: metrics.keptn.sh/v1alpha2
+          kind: KeptnMetric
+          name: availability-slo
+        target:
+          type: Value
+          value: "95"
