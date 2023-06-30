@@ -2,5 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: simplenode-dev
+  labels:
+    dt.owner: team-simplenode
   annotations:
     keptn.sh/lifecycle-toolkit: "enabled"  # this lines tells the webhook to handle the namespace
